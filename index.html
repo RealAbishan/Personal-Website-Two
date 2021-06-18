@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishan Parameswaran</title>
+    <link rel="icon" href="./Assets/Images/logo.png">
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--Icons from Boxicons.com-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+     <!--Scripts-->
+     <script src="./JS/main.js"></script>
+</head>
+<body>
+    
+    <!---Header--->
+
+    <div class="header-one">
+        <nav class="nav bd-grid">
+            <div class="nav-toggle-class" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div>
+                <a href="#" class="nav-logo">Abishan</a>
+            </div>
+
+            <div class="nav-menu-class" id="nav-menu">
+                <div class="nav-close-class" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#interests" class="nav-link">interests</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <script>
+        const navMenu = document.getElementById('nav-menu');
+        const toggleMenu = document.getElementById('nav-toggle');
+        const closeMenu = document.getElementById('nav-close');
+
+
+    //Show
+    toggleMenu.addEventListener('click', ()=>{
+        navMenu.classList.toggle('show')
+    })
+
+    //Close
+    closeMenu.addEventListener('click', ()=>{
+        navMenu.classList.remove('show')
+    })
+
+    //Remove Menu
+    const navLink = document.querySelectorAll('.nav-link');
+
+    function linkAction(){
+        navMenu.classList.remove('show');
+    }
+
+    navLink.forEach(n => n.addEventListener('click', linkAction));
+
+    //Scroll Section
+    const sections = document.querySelectorAll('section[id');
+
+    window.addEventListener('scroll', scrollActive)
+
+    function scrollActive(){
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight;
+            const sectiontop = current.offsetTop -50;
+            sectionId = current.getAttribute('id');
+
+            if(scrollY > sectiontop && scrollY <= screenTop + sectionHeight){
+                document.querySelectorAll('.nav-menu a[href*=' + sectionId +']').classList.add('active');
+            }
+            else{
+                document.querySelectorAll('.nav-menu a[href*=' + sectionId +']').classList.remove('active');
+            }
+        })
+    }
+
+
+    
+    </script>
+
+
+    <!--XXX--Header--XXX-->
+
+
+
+
+     <!---Main Section--->
+
+     <main class="main-one"> <!---1-main == main-one--->
+
+        <section class="home" id="home">
+            <div class="home-container bd-grid">
+                <div class="home-data">
+                    <div class="home-img">
+                        <img src="./Assets/Images/portfolio.png" alt="Portfolio Image">
+                    </div>
+
+                    <h1 class="home-title">Abishan Parameswaran</h1>
+                    <span class="home-profession">Developer and ML Enthusiastic</span>
+
+                    <div class="home-social">
+                        <a href="https://www.facebook.com/abishan09/" class="home-social-links"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/im_abishan/" class="home-social-links"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://twitter.com/Im_abishan09" class="home-social-links"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.linkedin.com/in/parameswaran-abishan/" class="home-social-links"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/RealAbishan" class="home-social-links"><i class='bx bxl-github' ></i></a>
+                    </div>
+
+                    <a download="" href="./Assets/Doc/Abishan Parameswaran Cv.pdf" class="button home-button">Download CV</a>
+
+                </div>
+            </div>
+        </section>
+
+     </main>
+
+    <!--XXX--Main Section--XXX-->
+
+    <!---************************************--->
+
+     <!---About Section--->
+
+     <section class="about section" id="about">
+         <span class="section-subtitle">My Intro</span>
+         <h2 class="section-title">About Me</h2>
+
+         <div class="about-container bd-grid">
+             <div class="about-data">
+                 <p class="about-description">
+                    I'm a highly motivated and hard-working individual who has recently completed my second year
+                    of university successfully. I can handle any task or situation with a mature and responsible
+                    approach. I am an excellent team worker and will handle the pressure with an initiative manner.
+                    I'm very keen and willing to enhance my skills on Software Development in order to become a
+                    more productive individual in future and to be beneficial to the society .
+                 </p>
+                 <img src="./Assets/Images/pic.png" alt="About Me" class="about-img">
+             </div>
+
+             <div>
+                <div class="about-information">
+                    <h3 class="about-information-title">Information</h3>
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-user about-information-icon' ></i>
+                        <span>Abishan Parameswaran</span>
+                    </div>
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-phone about-information-icon' ></i>
+                        <span>0094-7674-13309</span>
+                    </div>
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-envelope about-information-icon' ></i>
+                        <span>highoncode09@gmail.com</span>
+                    </div>
+                 </div>
+    
+    
+                 <div class="about-information">
+                    <h3 class="about-information-title">Experince and Support</h3>
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-medal about-information-icon' ></i>
+                        <div>
+                            <span class="about-information-subtitle">6 Months</span>
+                            <span class="about-information-subtitle-small">Content Writer</span>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-medal about-information-icon' ></i>
+                        <div>
+                            <span class="about-information-subtitle">3Months</span>
+                            <span class="about-information-subtitle-small">Web Developer</span>
+                        </div>
+                    </div>
+    
+    
+                    <div class="about-information-data">
+                        <i class='bx bx-medal about-information-icon' ></i>
+                        <div>
+                            <span class="about-information-subtitle">24/7 Online </span>
+                            <span class="about-information-subtitle-small">Support</span>
+                        </div>
+                    </div>
+    
+                 </div>
+             </div>
+         </div>
+     </section>
+
+    <!--XXX--About Section--XXX-->
+
+
+
+    <!---************************************--->
+
+    <!---Skills Section--->
+
+    <section class="skills section" id="portfolio">
+        <span class="section-subtitle">Why Choose Me?</span>
+        <h2 class="section-title">My Expertise Areas</h2>
+
+        <div class="skills-container bd-grid">
+            <div class="skills-content">
+                <h3 class="skills-subtitle">Front End</h3>
+
+                <div class="skills-data">
+                    <span class="skills-name">Html/CSS</span>
+                    <span class="skills-number">90%</span>
+                    <span class="skills-bar skills-html"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Java Script</span>
+                    <span class="skills-number">70%</span>
+                    <span class="skills-bar skills-js"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Angular</span>
+                    <span class="skills-number">60%</span>
+                    <span class="skills-bar skills-angular"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Bootstrap</span>
+                    <span class="skills-number">60%</span>
+                    <span class="skills-bar skills-react"></span>
+                </div>
+            </div>
+
+            <div class="skills-content">
+                <h3 class="skills-subtitle">Back End</h3>
+
+                <div class="skills-data">
+                    <span class="skills-name">Python</span>
+                    <span class="skills-number">70%</span>
+                    <span class="skills-bar skills-python"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Java</span>
+                    <span class="skills-number">70%</span>
+                    <span class="skills-bar skills-nodejs"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Firebase</span>
+                    <span class="skills-number">60%</span>
+                    <span class="skills-bar skills-firebase"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">PHP</span>
+                    <span class="skills-number">40%</span>
+                    <span class="skills-bar skills-php"></span>
+                </div>
+            </div>
+
+            <div class="skills-content">
+                <h3 class="skills-subtitle">Machine Leaening</h3>
+
+                <div class="skills-data">
+                    <span class="skills-name">Python</span>
+                    <span class="skills-number">70%</span>
+                    <span class="skills-bar skills-python-ml"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">R</span>
+                    <span class="skills-number">50%</span>
+                    <span class="skills-bar skills-r"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">Tensolrflow</span>
+                    <span class="skills-number">60%</span>
+                    <span class="skills-bar skills-tensorflow"></span>
+                </div>
+
+                <div class="skills-data">
+                    <span class="skills-name">OpenCV</span>
+                    <span class="skills-number">40%</span>
+                    <span class="skills-bar skills-opencv"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--XXX--Skills Section--XXX-->
+
+    <!---************************************--->
+
+    <!---Education Section--->
+
+    <section class="education section">
+        <span class="section-subtitle">Qualification</span>
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-container bd-grid">
+            <div class="education-content">
+                <div>
+                    <h3 class="education-year">2009-2017</h3>
+                    <span class="education-university">Vavuniya Tamil Maha Vidyalayam</span>
+                </div>
+
+                <div class="education-time">
+                    <span class="education-rounder"></span>
+                    <span class="eduction-line"></span>
+                </div>
+
+                <div>
+                    <h3 class="education-race">Advance Level</h3>
+                    <span class="education-speciality">Physical Science Stream</span>
+                </div>
+
+            </div>
+
+            <div class="education-content">
+                <div>
+                    <h3 class="education-year">2017-2018</h3>
+                    <span class="education-university">uki Coding School</span>
+                </div>
+
+                <div class="education-time">
+                    <span class="education-rounder"></span>
+                    <span class="eduction-line"></span>
+                </div>
+
+                <div>
+                    <h3 class="education-race">Diploma in Full Stack Development</h3>
+                    <span class="education-speciality">Wed Design and Development including Professional Skills</span>
+                </div>
+
+            </div>
+
+            <div class="education-content">
+                <div>
+                    <h3 class="education-year">2019-2020</h3>
+                    <span class="education-university">IDM Nations Campus</span>
+                </div>
+
+                <div class="education-time">
+                    <span class="education-rounder"></span>
+                    <span class="eduction-line"></span>
+                </div>
+
+                <div>
+                    <h3 class="education-race">Certificates in Programming Languages</h3>
+                    <span class="education-speciality">Java,C,C++</span>
+                </div>
+
+            </div>
+
+            <div class="education-content">
+                <div>
+                    <h3 class="education-year">2020-2024</h3>
+                    <span class="education-university">Informatics Institute of Technology</span>
+                </div>
+
+                <div class="education-time">
+                    <span class="education-rounder"></span>
+                    <span class="eduction-line"></span>
+                </div>
+
+                <div>
+                    <h3 class="education-race">BEng(Hons) Software Engineering</h3>
+                    <span class="education-speciality">Speacilized in Machine Learning</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--XXX--Education Section--XXX-->
+
+
+    <!---************************************--->
+
+    <!---Projects Section
+
+    <section class="project section">
+        <div class="project-container bd-grid">
+            <div class="project-data">
+                <h2 class="section-title project-title">Agro Guru</h2>
+                <p class="project-description">Machine Learning & Data Science project which has been done as a
+                    Second Year Group Project.Prediction of plant part diseases and
+                    suggesting both natural and artificial remedies are the main features.
+                    The model training was done with Python in Google Collaborate.</p>
+                    <a href="#" class="button button-light">See More</a>
+            </div>
+
+            <img src="./Assets/Images/AG.jpeg" alt="Project Img" class="project-img">
+        </div>
+    </section>
+
+    XXX--Projects Section--XXX-->
+
+
+    <!---************************************--->
+
+    <!---Project Section--->
+
+
+
+    <!--XXX--Project Section--XXX-->
+
+    <div class="works section" id="projects">
+        <span class="section-subtitle">My Portfolio</span>
+        <h2 class="section-title">Acadamics Project</h2>
+
+        <div class="works-container bd-grid">
+            <div class="works-img">
+                <img src="./Assets/Images/AG.jpeg" alt="Agro Guru Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">Agro Guru</span>
+                </div>
+            </div>
+
+            <div class="works-img">
+                <img src="./Assets/Images/TOL.jpg" alt="Tales of Lanka Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">Tales of Lanka</span>
+                </div>
+            </div>
+
+            <div class="works-img">
+                <img src="./Assets/Images/AG.jpeg" alt="Financial Calc Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">Financial Calculator</span>
+                </div>
+            </div>
+
+            <div class="works-img">
+                <img src="./Assets/Images/AG.jpeg" alt="Gym Manager Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">Stay Fit GYM</span>
+                </div>
+            </div>
+
+            <div class="works-img">
+                <img src="./Assets/Images/EPL.jpg" alt="Premier League Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">English Premier League</span>
+                </div>
+            </div>
+
+            <div class="works-img">
+                <img src="./Assets/Images/EPL.jpg" alt="Premier League Project">
+
+                <div class="works-data">
+                    <a href="#" class="works-link"><i class='bx bx-link' ></i></a>
+                    <span class="works-title">English Premier League</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!---************************************--->
+
+    <!---Interests Section--->
+
+    <section class="interests section" id="interests">
+        <span class="section-subtitle">What I Do</span>
+        <h2 class="section-title">My Interests</h2>
+
+        <div class="service-container bd-grid">
+            <div class="service-content">
+                <i class='bx bx-tennis-ball service-icon'></i>
+                <h3 class="service-title">Cricket</h3>
+                <p class="service-description">I'm very passionated about Cricket. I've represented my School, District and Provincial cricket teams since 2012.Kumar Sangakkara and Ashwin Ravichandram are my all time favourite cricketers.</p>
+            </div>
+
+            <div class="service-content">
+                <i class='bx bx-book-open service-icon'></i>
+                <h3 class="service-title">Reading Books</h3>
+                <p class="service-description">I love to read books speacially in travelling.Sujatha and Na.Muthukkumar are my favorite writers. Black Money is the best book I've read.</p>
+            </div>
+
+            <div class="service-content">
+                <i class='bx bx-game service-icon'></i>
+                <h3 class="service-title">Online Gaming</h3>
+                <p class="service-description">Playing Online Games was my hobby since my chilhood. It gives me relief from my regular activities. Currently I'm playing Call of Duty to bring out my self from stressfull life.</p>
+            </div>
+
+            <div class="service-content">
+                <i class='bx bx-code service-icon'></i>
+                <h3 class="service-title">Web Designing</h3>
+                <p class="service-description">I love to Design and Develop websites. It's been my hobby since my school days.</p>
+            </div>
+
+            <div class="service-content">
+                <i class='bx bx-dish service-icon'></i>
+                <h3 class="service-title">Cooking</h3>
+                <p class="service-description">COVId-19 brought the cook out of my self. I tried new dishes in Lockdown. It became a hobby for me since then.</p>
+            </div>
+
+            <div class="service-content">
+                <i class='bx bx-movie service-icon'></i>
+                <h3 class="service-title">Watching Movie</h3>
+                <p class="service-description">I'm much interested in watching Movies and Web/Television Series. I don't limit my self in one particular language. I watch movies more than 6 lanuages. It helps me to know more languages and different cultures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--XXX--Interests Section--XXX-->
+
+
+
+    <!---************************************--->
+
+    <!---Contact Section--->
+
+    <section class="contact section" id="contact">
+        <span class="section-subtitle">Contact Me</span>
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-container bd-grid">
+            <form action="" class="contact-form">
+                <div class="contact-inputs">
+                    <input type="text" placeholder="Name" class="contact-input">
+                    <input type="mail" placeholder="Email" class="contact-input">
+                </div>
+
+                <input type="text" placeholder="Project" class="contact-input">
+
+                <textarea name="" id="" cols="" rows="10" placeholder="Message" class="contact-input"></textarea>
+                <input type="submit" value="Send Message" class="button contact-button">
+            </form>
+
+            <div>
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Call Me</h3>
+                    <span class="contact-text">0094 7674 13309</span>
+                    <span class="contact-text"></span>
+                </div>
+
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">E -Mail</h3>
+                    <span class="contact-text">highoncode09@gmail.com</span>
+                    <span class="contact-text"></span>
+                </div>
+
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Location</h3>
+                    <span class="contact-text">No 160C Thirunavatkulam,</span>
+                    <span class="contact-text">Vavuniya - Sri Lanka</span>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--XXX--Contact Section--XXX-->
+
+
+    <!---************************************--->
+
+    <!---Footer Section--->
+
+    <footer class="footer section">
+        <div class="footer-container bd-grid">
+            <h1 class="footer-title">Abishan</h1>
+            <p class="footer-description">This is Abishan Parameswaran.Contact me for further enquires.</p>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/abishan09/" class="footer-link"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/im_abishan/" class="footer-link"><i class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/Im_abishan09" class="footer-link"><i class='bx bxl-twitter'></i></a>
+            </div>
+
+            <p class="footer-copy">&copy; All rights reserved to Abishan Parameswaran</p>
+        </div>
+    </footer>
+
+    <!--XXX--Footer Section--XXX-->
+
+
+
+
+<!--Scripts-->
+<script src="./JS/main.js"></script>
+</body>
+</html>
